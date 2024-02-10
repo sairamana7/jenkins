@@ -2,24 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('DEV') {
             steps {
-                echo ' World'
+                echo ' DEV DONE'
             }
         }
-        stage('hi') {
+        stage('QA') {
             steps {
-                echo 'Hello '
+                echo 'QA COMPLETED '
             }
         }
-        stage('done') {
+        stage('PROD') {
             steps {
-                echo ' World'
+                echo ' DEPLOYMENT DONE'
             }
         }
         stage('deployed') {
             steps {
-                echo 'Hello '
+                echo 'TRUE '
             }
         }
         
