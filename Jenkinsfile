@@ -19,9 +19,11 @@ pipeline {
         }
         stage('deployed') {
             steps {
-                echo 'TRUE '
+                echo 'DONE '
             }
         }
         
     }
 }
+
+
