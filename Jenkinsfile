@@ -37,7 +37,9 @@ pipeline {
             echo "the build ran"
         }
         success {
+            """
             echo "build success by $name from $city "
+            """
         }
         failure {
             echo "build failed , please check and run again"
