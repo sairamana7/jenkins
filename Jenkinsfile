@@ -25,7 +25,7 @@ pipeline {
         }
         stage('QA') {
             steps {
-                echo 'QA COMPLETED '
+                echo 'QA COMPLETED successfully'
             }
         }
         stage('PROD') {
