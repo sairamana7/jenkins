@@ -66,6 +66,7 @@ pipeline {
         success {
            sh """
             echo "build success by $name from $city "
+            echo "this job is auto trigerred"
             """
         }
         failure {
