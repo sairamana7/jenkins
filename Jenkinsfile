@@ -12,7 +12,6 @@ pipeline {
              timeout(time: 20, unit: 'SECONDS') 
              disableConcurrentBuilds()
         }
-
     // build
     stages {
         stage('DEV') {
