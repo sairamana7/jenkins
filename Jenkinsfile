@@ -9,7 +9,7 @@ pipeline {
             city = "Hyderabad"
         }
         options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 5, unit: 'SECONDS') 
          }
     // build
     stages {
@@ -18,6 +18,7 @@ pipeline {
                 echo ' DEV DONE'
                 sh """
                 echo "trigerred by $name from $city"
+                sleep 5
                 """ 
             }
         }
