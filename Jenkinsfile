@@ -37,7 +37,7 @@ pipeline {
             echo "the build ran"
         }
         success {
-            """
+           sh """
             echo "build success by $name from $city "
             """
         }
