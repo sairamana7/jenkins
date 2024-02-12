@@ -31,7 +31,7 @@ pipeline {
                 echo ' DEV DONE'
                 sh """
                 echo "trigerred by $name from $city"
-                sleep 10
+                 #sleep 10
                 """ 
             }
         }
