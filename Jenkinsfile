@@ -16,6 +16,9 @@ pipeline {
         stage('DEV') {
             steps {
                 echo ' DEV DONE'
+                sh """
+                echo "trigerred by $name from $city"
+                """ 
             }
         }
         stage('QA') {
