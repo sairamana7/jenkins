@@ -4,6 +4,10 @@ pipeline {
             label 'Agent-1'       
         }
         }
+        environment {
+            name = "Sai Ramana "
+            city = "Hyderabad"
+        }
     // build
     stages {
         stage('DEV') {
@@ -33,7 +37,7 @@ pipeline {
             echo "the build ran"
         }
         success {
-            echo "build success"
+            echo "build success by $name from $city "
         }
         failure {
             echo "build failed , please check and run again"
