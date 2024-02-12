@@ -4,7 +4,7 @@ pipeline {
             label 'Agent-1'       
         }
         }
-
+    // build
     stages {
         stage('DEV') {
             steps {
@@ -27,6 +27,17 @@ pipeline {
             }
         }
         
+    }
+    post {
+        always {
+            echo "the build ran"
+        }
+        success {
+            echo "build success"
+        }
+        failure {
+            echo "build failed , please check and run again"
+        }
     }
 }
 
