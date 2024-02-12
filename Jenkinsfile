@@ -41,7 +41,7 @@ pipeline {
     }
     post {
         always {
-            echo "the build ran"
+            echo "the build ran in always post"
         }
         success {
            sh """
@@ -50,6 +50,9 @@ pipeline {
         }
         failure {
             echo "build failed , please check and run again"
+        }
+        aborted {
+            echo "the job has been aborted and Build not built"
         }
     }
 }
