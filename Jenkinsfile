@@ -68,6 +68,7 @@ pipeline {
             echo "build success by $name from $city "
             echo "this job is auto trigerred from git with webhook"
             """
+            
         }
         failure {
             echo "build failed , please check and run again"
