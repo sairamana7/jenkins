@@ -9,7 +9,7 @@ pipeline {
             city = "Hyderabad"
         }
         options {
-        timeout(time: 5, unit: 'SECONDS') 
+        timeout(time: 10, unit: 'SECONDS') 
          }
     // build
     stages {
