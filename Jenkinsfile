@@ -12,6 +12,18 @@ pipeline {
              timeout(time: 20, unit: 'SECONDS') 
              disableConcurrentBuilds()
         }
+        parameters {
+        string(name: 'trigerred by', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'reason', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'terms and conditions', defaultValue: true, description: 'Accept to proceed')
+
+        choice(name: 'pick the version', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD12', defaultValue: 'SECRET', description: 'Enter a password')
+        }
+
     // build
     stages {
         stage('DEV') {
@@ -25,7 +37,7 @@ pipeline {
         }
         stage('QA') {
             steps {
-                echo 'QA COMPLETED successfully'
+                echo 'QA COMPLETED '
             }
         }
         stage('PROD') {
