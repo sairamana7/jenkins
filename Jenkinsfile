@@ -8,6 +8,9 @@ pipeline {
             name = "Sai Ramana "
             city = "Hyderabad"
         }
+        options {
+        timeout(time: 1, unit: 'SECONDS') 
+         }
     // build
     stages {
         stage('DEV') {
